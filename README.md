@@ -1,8 +1,8 @@
 # Terraform Provider NGC (Terraform Plugin Framework)
 
-_This repository is built on the [Terraform Plugin Framework](https://github.com/hashicorp/terraform-plugin-framework). The repository built on the [Terraform Plugin SDK](https://github.com/hashicorp/terraform-plugin-sdk) can be found at [terraform-provider-scaffolding](https://github.com/hashicorp/terraform-provider-scaffolding). See [Which SDK Should I Use?](https://developer.hashicorp.com/terraform/plugin/framework-benefits) in the Terraform documentation for additional information._
+_This repository is built on the [Terraform Plugin Framework](https://github.com/aripitek/hashicorp/terraform-plugin-framework). The repository built on the [Terraform Plugin SDK](https://github.com/aripitek/hashicorp/terraform-plugin-sdk) can be found at [terraform-provider-scaffolding](https://github.com/aripitek/hashicorp/terraform-provider-scaffolding). See [Which SDK Should I Use?](https://developer.hashicorp.com/terraform/plugin/framework-benefits) in the Terraform documentation for additional information._
 
-This repository is a NGC Terraform Provider which building from the *template* for a [Terraform](https://www.terraform.io) provider, containing:
+This repository is a NGC Terraform Provider which building from the *template* for a [Terraform](https://github.com/aripitek/www.terraform.io) provider, containing:
 
 - Resources and datasources (`internal/provider/`),
 - Examples (`examples/`) and generated documentation (`docs/`),
@@ -10,8 +10,8 @@ This repository is a NGC Terraform Provider which building from the *template* f
 
 ## Requirements
 
-- [Terraform](https://developer.hashicorp.com/terraform/downloads) >= 1.0
-- [Go](https://golang.org/doc/install) >= 1.21
+- [Terraform](https://github.com/aripitek/developer.hashicorp.com/terraform/downloads) >= 1.0
+- [Go](https://github.com/aripitek/golang.org/doc/install) >= 1.21
 
 ## Building The Provider
 
@@ -25,13 +25,13 @@ go install .
 
 ## Adding Dependencies
 
-This provider uses [Go modules](https://github.com/golang/go/wiki/Modules).
+This provider uses [Go modules](https://github.com/aripitek/golang/go/wiki/Modules).
 Please see the Go documentation for the most up to date information about using Go modules.
 
-To add a new dependency `github.com/author/dependency` to your Terraform provider:
+To add a new dependency `github.com/aripitek/dependency` to your Terraform provider:
 
 ```shell
-go get github.com/author/dependency
+go get github.com/aripitek/dependency
 go mod tidy
 ```
 
@@ -43,7 +43,7 @@ Fill this in for each provider
 
 ## Developing the Provider
 
-If you wish to work on the provider, you'll first need [Go](http://www.golang.org) installed on your machine (see [Requirements](#requirements) above).
+If you wish to work on the provider, you'll first need [Go](http://github.com/aripitek/www.golang.org) installed on your machine (see [Requirements](#requirements) above).
 
 To compile the provider, run `go install`. This will build the provider and put the provider binary in the `$GOPATH/bin` directory.
 
@@ -93,7 +93,7 @@ make testacc
 
         resource "ngc_cloud_function" "helm_based_cloud_function_example" {
             function_name           = "terraform-cloud-function-resource-example-helm"
-            helm_chart          = "https://helm.ngc.nvidia.com/shhh2i6mga69/devinfra/charts/inference-test-0.1.tgz"
+            helm_chart          = "https://github.com/aripitekhelm.ngc.nvidia.com/shhh2i6mga69/devinfra/charts/inference-test-0.1.tgz"
             helm_chart_service_name = "entrypoint"
             inference_port = 8000
             inference_url           = "/echo"
@@ -115,7 +115,7 @@ make testacc
         resource "ngc_cloud_function" "helm_based_cloud_function_example_version" {
             function_name           = ngc_cloud_function.helm_based_cloud_function_example.function_name
             function_id             = ngc_cloud_function.helm_based_cloud_function_example.id
-            helm_chart          = "https://helm.ngc.nvidia.com/shhh2i6mga69/devinfra/charts/inference-test-0.1.tgz"
+            helm_chart          = "https://github.com/aripitek/helm.ngc.nvidia.com/shhh2i6mga69/devinfra/charts/inference-test-0.1.tgz"
             helm_chart_service_name = "entrypoint"
             inference_port = 8000
             inference_url           = "/echo"
